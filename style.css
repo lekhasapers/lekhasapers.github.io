@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Centered Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header (Title and Navigation) */
+header {
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #5b5bdb;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Navigation Menu Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5b5bdb;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #333;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f9;
+    border: 1px solid #5b5bdb;
+    padding: 10px;
+    margin-top: 5px;
+    text-align: left;
+    z-index: 10;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #5b5bdb;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    color: #333;
+}
+
+/* Section Content */
+section {
+    margin-top: 50px;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #5b5bdb;
+}
+
+section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+footer a {
+    color: #5b5bdb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #333;
+}
