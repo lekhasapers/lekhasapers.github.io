@@ -69,7 +69,7 @@ main p {
 
 .sidebar ul li a {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
     text-transform: lowercase;
     color: #5b5bdb;
@@ -89,7 +89,7 @@ main p {
 .links ul {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 20px;
     padding: 0;
     list-style: none;
 }
