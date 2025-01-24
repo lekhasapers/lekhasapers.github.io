@@ -83,13 +83,13 @@ main p {
 /* Relevant Links Section */
 .links {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .links ul {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 35px;
     padding: 0;
     list-style: none;
 }
