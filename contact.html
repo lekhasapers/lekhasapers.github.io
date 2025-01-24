@@ -3,16 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Contact</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .contact-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: lowercase;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #5b5bdb;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: #333;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    <div class="layout">
-        <main>
-            <h1>contact</h1>
-            <p>contact page test</p>
-        </main>
+    <div class="contact-container">
+        
+        <p>don't be a stranger</p>
+        <div class="contact-links">
+            <a href="mailto:lekhasapers@ucsb.edu">Email</a>
+            <a href="https://www.linkedin.com/in/lekha-sapers-27a215243/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
     </div>
 </body>
 </html>
