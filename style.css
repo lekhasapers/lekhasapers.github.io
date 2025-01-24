@@ -6,107 +6,61 @@
 }
 
 body {
-    font-family: 'Playfair Display', serif; /* Consistent font for the body */
+    font-family: 'Playfair Display', serif;
     background-color: #ffffff;
     color: #333;
     display: flex;
-    height: 100vh;
-    overflow-y: scroll;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Layout */
+/* Main Layout */
 .layout {
-    display: flex;
-    width: 100%;
-    position: relative;
+    width: 90%;
+    max-width: 800px; /* Prevents content from exceeding the white line */
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
 /* Main Content */
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px;
-    max-width: 60%;
+    max-width: 600px; /* Keep content width constrained */
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 main h1 {
-    font-size: 2.5rem; /* Adjusted heading size */
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: lowercase;
-    color: #000;
 }
 
 main p {
-    font-size: 1.3rem; /* Slightly larger for better readability */
-    line-height: 1.6; /* Maintain spacing for paragraphs */
+    font-size: 1rem;
+    line-height: 1.6;
     margin-bottom: 20px;
+    text-align: justify;
 }
-
-/* Relevant Links Section */
-.links h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-transform: lowercase;
-}
-
-.links ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-.links li {
-    margin-bottom: 10px;
-}
-
-.links a {
-    text-decoration: none;
-    font-size: 1.2rem; /* Slightly increased for links */
-    font-weight: normal;
-    color: #000;
-    transition: color 0.3s;
-}
-
-.links a:hover {
-    color: #5b5bdb; /* Purple on hover */
-}
-
-/* Image Gallery */
-.gallery {
-    display: flex;
-    justify-content: space-between; /* Space out images */
-    align-items: flex-start; /* Align images at the top */
-    gap: 20px; /* Add space between images */
-    margin: 40px auto; /* Center the gallery with margin */
-    max-width: 80%; /* Limit the gallery width */
-    flex-wrap: wrap; /* Wrap images on smaller screens */
-}
-
-.gallery img {
-    width: 48%; /* Each image takes 48% of the gallery width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Fit images within their boxes */
-    border: 1px solid #ddd; /* Optional border for separation */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    margin-bottom: 20px; /* Add space below each image */
-}
-
-/* Ensure images stack on smaller screens */
-@media (max-width: 768px) {
-    .gallery img {
-        width: 100%; /* Full width on small screens */
-    }
-}
-
 
 /* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 180px;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .sidebar ul {
     list-style: none;
-    margin-top: 20px;
+    padding: 0;
 }
 
 .sidebar ul li {
@@ -115,7 +69,7 @@ main p {
 
 .sidebar ul li a {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: lowercase;
     color: #5b5bdb;
@@ -126,3 +80,73 @@ main p {
     color: #333;
 }
 
+/* Relevant Links Section */
+.links {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.links ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.links li {
+    margin: 0;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #5b5bdb;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #333;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 80%; /* Keeps images large and equally spaced */
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .layout {
+        padding: 20px;
+    }
+
+    .gallery {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .gallery img {
+        width: 90%; /* Larger for mobile view */
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
