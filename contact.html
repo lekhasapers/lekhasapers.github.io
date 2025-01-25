@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Playfair Display', serif;
@@ -13,9 +14,25 @@
             margin: 0;
             padding: 0;
             display: flex;
+            height: 100vh; /* Ensure the body takes up the full viewport height */
+        }
+
+        .layout {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar-container {
+            width: 220px; /* Fixed width for the sidebar */
+            flex-shrink: 0;
+        }
+
+        .content-container {
+            flex: 1; /* Take up remaining space after sidebar */
+            display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            padding: 20px;
         }
 
         .contact-container {
@@ -50,16 +67,48 @@
             color: #333;
             transform: scale(1.05);
         }
+
+        /* Ensure proper centering for small screens */
+        @media screen and (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .layout {
+                flex-direction: column;
+            }
+
+            .sidebar-container {
+                width: 100%;
+                text-align: center;
+            }
+
+            .content-container {
+                margin: 0;
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="contact-container">
-        
-        <p>don't be a stranger</p>
-        <div class="contact-links">
-            <a href="mailto:lekhasapers@ucsb.edu">Email</a>
-            <a href="https://www.linkedin.com/in/lekha-sapers-27a215243/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="layout">
+        <!-- Sidebar container -->
+        <div class="sidebar-container"></div>
+
+        <!-- Contact content -->
+        <div class="content-container">
+            <div class="contact-container">
+                <h1>contact</h1>
+                <p>don't be a stranger</p>
+                <div class="contact-links">
+                    <a href="mailto:lekhasapers@ucsb.edu">Email</a>
+                    <a href="https://www.linkedin.com/in/lekha-sapers-27a215243/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Include JavaScript -->
+    <script src="sidebar.js" defer></script>
 </body>
 </html>

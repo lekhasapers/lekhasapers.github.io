@@ -3,16 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Computing</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .layout {
+            display: flex;
+            width: 100%;
+        }
+
+        .sidebar-container {
+            width: 220px; /* Fixed sidebar width */
+            flex-shrink: 0;
+        }
+
+        .content-container {
+            flex: 1; /* Take up the remaining space after sidebar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        main {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: lowercase;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .layout {
+                flex-direction: column;
+            }
+
+            .sidebar-container {
+                width: 100%;
+                text-align: center;
+            }
+
+            .content-container {
+                margin: 0;
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="layout">
-        <main>
-            <h1>computing</h1>
-            <p>computing page test</p>
-        </main>
+        <!-- Sidebar container -->
+        <div class="sidebar-container"></div>
+
+        <!-- Main content -->
+        <div class="content-container">
+            <main>
+                <h1>computing</h1>
+                <p>computing page test</p>
+            </main>
+        </div>
     </div>
+
+    <!-- Include JavaScript -->
+    <script src="sidebar.js" defer></script>
 </body>
 </html>
