@@ -112,7 +112,7 @@ main p {
 .sidebar ul li a {
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: lowercase;
     color: black; /* Black for default links */
     transition: color 0.3s;
