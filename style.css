@@ -1,4 +1,3 @@
-
 /* General Styling */
 * {
     margin: 0;
@@ -49,13 +48,12 @@ main p {
     font-size: 0.95rem; /* Reduce font size */
     line-height: 1.5;
     margin-bottom: 15px;
-    margin-right: 1px;
     text-align: justify;
 }
 
 /* Relevant Links Section */
 .links {
-    text-align: right;
+    text-align: left;
     margin-top: 175px;
 }
 
@@ -75,7 +73,7 @@ main p {
 }
 
 .links a {
-    text-decoration: none;
+    text-decoration: underline;
     font-size: 1rem;
     font-weight: bold;
     color: black; /* Black for default links */
@@ -86,16 +84,53 @@ main p {
     color: #5b5bdb; /* Purple on hover for all links */
 }
 
-/* First Link Styling */
-.sidebar ul li:first-child a {
-    color: #5b5bdb; /* Purple for the first link */
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: 0; /* Move sidebar to the left */
+    top: 0;
+    height: 100vh;
+    width: 100px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: none;
+}
+
+/* Sidebar List */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-transform: lowercase;
+    color: black; /* Black for default links */
+    transition: color 0.3s;
+}
+
+.sidebar ul li a.active {
+    color: #5b5bdb; /* Purple for the active link */
+}
+
+.sidebar ul li a:hover {
+    color: #5b5bdb; /* Purple on hover */
 }
 
 /* Gallery */
 .gallery {
     display: flex;
     justify-content: space-between; /* Space between images */
-    gap: 40px;
+    gap: 70px;
     margin-top: 30px;
     max-width: 900px; /* Center images below bio */
 }
@@ -108,48 +143,29 @@ main p {
     border-radius: 5px;
 }
 
-/* Sidebar Navigation */
-.sidebar {
-    position: fixed;
-    left: 0; /* Move sidebar to the left */
-    top: 0;
-    height: 100vh;
-    width: 150px;
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    border: none; /* Remove the line */
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 15px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: lowercase;
-    color: black; /* Black for default links */
-    transition: color 0.3s;
-}
-
-.sidebar ul li a:hover {
-    color: #5b5bdb; /* Purple on hover */
-}
-
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     .content-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack content vertically on smaller screens */
         gap: 20px;
+        max-width: 100%; /* Allow the layout to shrink */
+        padding: 10px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    main p {
+        font-size: 0.9rem;
+    }
+
+    .links h2 {
+        font-size: 1.1rem;
+    }
+
+    .links a {
+        font-size: 0.9rem;
     }
 
     .gallery {
@@ -159,10 +175,27 @@ main p {
     }
 
     .gallery img {
+        width: 100%; /* Images span full width */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: static;
         width: 100%;
+        height: auto;
+        padding: 10px 0;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #f9f9f9;
     }
 
-    .sidebar {
-        display: none;
+    .sidebar ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 0;
     }
 }
