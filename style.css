@@ -1,3 +1,4 @@
+
 /* General Styling */
 * {
     margin: 0;
@@ -9,53 +10,117 @@ body {
     font-family: 'Playfair Display', serif;
     background-color: #ffffff;
     color: #333;
+}
+
+/* Layout Container */
+.layout {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 
-/* Main Layout */
-.layout {
-    width: 90%;
-    max-width: 800px; /* Prevents content from exceeding the white line */
-    margin: 0 auto;
-    padding: 40px 20px;
+/* Content and Links Layout */
+.content-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Main bio takes more space, links less */
+    gap: 50px;
+    max-width: 900px; /* Slightly wider layout for better alignment */
+    align-items: stretch;
 }
 
-/* Main Content */
+/* Main Bio Content */
 main {
-    max-width: 600px; /* Keep content width constrained */
-    margin-bottom: 20px;
-    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 main h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Smaller title for balance */
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 85px;
     text-transform: lowercase;
 }
 
 main p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 0.95rem; /* Reduce font size */
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-right: 1px;
     text-align: justify;
+}
+
+/* Relevant Links Section */
+.links {
+    text-align: right;
+    margin-top: 175px;
+}
+
+.links h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black; /* Black for default links */
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #5b5bdb; /* Purple on hover for all links */
+}
+
+/* First Link Styling */
+.sidebar ul li:first-child a {
+    color: #5b5bdb; /* Purple for the first link */
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: space-between; /* Space between images */
+    gap: 40px;
+    margin-top: 30px;
+    max-width: 900px; /* Center images below bio */
+}
+
+.gallery img {
+    width: 60%; /* Proportional width */
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
 }
 
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    right: 0;
+    left: 0; /* Move sidebar to the left */
     top: 0;
     height: 100vh;
-    width: 180px;
-    border-left: 1px solid #ddd;
-    padding: 20px;
+    width: 150px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    border: none; /* Remove the line */
 }
 
 .sidebar ul {
@@ -69,84 +134,35 @@ main p {
 
 .sidebar ul li a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: lowercase;
-    color: #5b5bdb;
+    color: black; /* Black for default links */
     transition: color 0.3s;
 }
 
 .sidebar ul li a:hover {
-    color: #333;
-}
-
-/* Relevant Links Section */
-.links {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.links ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-    list-style: none;
-}
-
-.links li {
-    margin: 0;
-}
-
-.links a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: normal;
-    color: #5b5bdb;
-    transition: color 0.3s;
-}
-
-.links a:hover {
-    color: #333;
-}
-
-/* Gallery */
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.gallery img {
-    width: 80%; /* Keeps images large and equally spaced */
-    height: auto;
-    object-fit: cover;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
+    color: #5b5bdb; /* Purple on hover */
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .layout {
-        padding: 20px;
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .gallery {
         flex-direction: column;
         gap: 15px;
+        margin-top: 20px;
     }
 
     .gallery img {
-        width: 90%; /* Larger for mobile view */
+        width: 100%;
     }
 
     .sidebar {
         display: none;
-    }
-
-    .links ul {
-        flex-direction: column;
-        gap: 10px;
     }
 }
