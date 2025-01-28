@@ -231,8 +231,6 @@
  }
  
  
- 
- 
  body.computing-page {
     display: flex;
     flex-direction: column;
@@ -241,23 +239,7 @@
  
  
  body.computing-page .layout {
-    flex: 1;
- }
- 
- 
- body.computing-page .bottom-image-container {
-    display: flex;
-    justify-content: center;
-
- }
- 
- 
- body.computing-page #bottom-image {
-    width: 100%;
-    max-width: 1000px;
-    height: auto; /* Maintains aspect ratio */
-    border: 1px solid #ddd; /* Optional border for a cleaner look */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adds depth */
+    flex: 0.8;
  }
  
  
@@ -492,5 +474,64 @@ body {
     .custom-flex-images img {
         width: 100%;
         max-width: none; /* Remove max-width for responsiveness */
+    }
+}
+
+
+/* Computing Page Specific Styling */
+body.computing-page .two-column-container-computing {
+    display: flex; /* Enables flex layout */
+    gap: 50px; /* Adds spacing between columns */
+    align-items: flex-start; /* Ensures both columns match height */
+    max-width: 1200px; /* Restricts max width */
+    margin: 0 auto; /* Centers content horizontally */
+    padding: 2px;
+    margin-top: 20px; /* Adds space above the container */
+}
+
+body.computing-page .computing-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between paragraphs */
+}
+
+body.computing-page .computing-column p {
+    margin: 0;
+    text-align: justify; /* Justifies text alignment */
+    break-inside: avoid; /* Prevents breaks inside columns */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Bottom Image Styling */
+body.computing-page .bottom-image-container {
+    display: flex;
+    justify-content: center; /* Centers the image */
+    margin-top: -40px; /* Reduces top margin */
+}
+
+body.computing-page #bottom-image {
+    width: 100%;
+    max-width: 1000px; /* Limits the image width */
+    height: auto; /* Maintains aspect ratio */
+    border: 1px solid #ddd; /* Optional border for cleaner look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adds subtle depth */
+    border-radius: 8px; /* Matches style with other images */
+}
+
+/* Responsive Design for Computing Page */
+@media screen and (max-width: 768px) {
+    body.computing-page .two-column-container-computing {
+        flex-direction: column; /* Stacks columns vertically */
+        gap: 30px; /* Reduces gap for smaller screens */
+        padding: 10px;
+    }
+
+    body.computing-page .computing-column {
+        max-width: 100%; /* Ensures columns take full width */
+    }
+
+    body.computing-page #bottom-image {
+        max-width: 100%; /* Scales image for smaller screens */
     }
 }
