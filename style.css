@@ -42,7 +42,7 @@
  
  
  main h1 {
-    font-size: 2rem; /* Smaller title for balance */
+    font-size: 2rem; 
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 85px;
@@ -51,7 +51,7 @@
  
  
  main p {
-    font-size: 0.95rem; /* Reduce font size */
+    font-size: 0.95rem; 
     line-height: 1.5;
     margin-bottom: 15px;
     text-align: justify;
@@ -175,7 +175,7 @@
  
  
     main h1 {
-        font-size: 1.8rem;
+        font-size: 2.0rem;
     }
  
  
@@ -534,7 +534,7 @@ body.computing-page .computing-column p {
 
 /* Title Styling */
 body.computing-page h1 {
-    font-size: 2.5rem; /* Larger and more prominent */
+    font-size: 2.0rem; 
     font-weight: bold;
     text-transform: lowercase;
     margin-bottom: 20px;
