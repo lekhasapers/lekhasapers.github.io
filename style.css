@@ -416,7 +416,7 @@ body {
 .custom-image-container-right {
     flex: 1;
     text-align: center;
-    max-width: 700px;
+    max-width: 800px;
     margin-left: auto;
 }
 
@@ -477,54 +477,96 @@ body {
     }
 }
 
-
-/* Computing Page Specific Styling */
-body.computing-page .two-column-container-computing {
-    display: flex; /* Enables flex layout */
-    gap: 50px; /* Adds spacing between columns */
-    align-items: flex-start; /* Ensures both columns match height */
-    max-width: 1200px; /* Restricts max width */
-    margin: 0 auto; /* Centers content horizontally */
-    padding: 2px;
-    margin-top: 20px; /* Adds space above the container */
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body.computing-page .computing-column {
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Computing Page Specific Styling */
+body.computing-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.computing-page .layout {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Adds spacing between paragraphs */
+    align-items: center;
+    padding: 20px;
+}
+
+/* Two-Column Layout */
+body.computing-page .two-column-container-computing {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    gap: 50px; /* Adds spacing between columns */
+    align-items: flex-start; /* Align content at the top */
+    max-width: 1200px; /* Restricts container width */
+    margin: 20px auto; /* Centers content horizontally */
+    padding: 10px;
+}
+
+body.computing-page .computing-column {
+    flex: 1; /* Makes columns take equal width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between paragraphs */
 }
 
 body.computing-page .computing-column p {
     margin: 0;
-    text-align: justify; /* Justifies text alignment */
-    break-inside: avoid; /* Prevents breaks inside columns */
-    line-height: 1.6; /* Improves readability */
+    text-align: justify;
+    line-height: 1.8; /* Improves readability */
+}
+
+/* Title Styling */
+body.computing-page h1 {
+    font-size: 2.5rem; /* Larger and more prominent */
+    font-weight: bold;
+    text-transform: lowercase;
+    margin-bottom: 20px;
+    align-self: flex-start; /* Aligns title to the left */
 }
 
 /* Bottom Image Styling */
 body.computing-page .bottom-image-container {
     display: flex;
     justify-content: center; /* Centers the image */
-    margin-top: -40px; /* Reduces top margin */
+    margin-top: 40px; /* Adds spacing between content and the image */
 }
 
 body.computing-page #bottom-image {
     width: 100%;
-    max-width: 1000px; /* Limits the image width */
+    max-width: 1000px; /* Restricts image size */
     height: auto; /* Maintains aspect ratio */
-    border: 1px solid #ddd; /* Optional border for cleaner look */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adds subtle depth */
-    border-radius: 8px; /* Matches style with other images */
+    border: 1px solid #ddd; /* Adds a light border */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounds corners */
 }
 
-/* Responsive Design for Computing Page */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     body.computing-page .two-column-container-computing {
         flex-direction: column; /* Stacks columns vertically */
-        gap: 30px; /* Reduces gap for smaller screens */
-        padding: 10px;
+        gap: 30px; /* Adjusts spacing for smaller screens */
+    }
+
+    body.computing-page h1 {
+        font-size: 2rem; /* Adjusts title size */
+        text-align: center; /* Centers title */
     }
 
     body.computing-page .computing-column {
@@ -532,6 +574,7 @@ body.computing-page #bottom-image {
     }
 
     body.computing-page #bottom-image {
-        max-width: 100%; /* Scales image for smaller screens */
+        max-width: 100%; /* Makes image responsive */
     }
 }
+
