@@ -1,11 +1,17 @@
+// Wait for the DOM to load
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("hover-video");
 
-const video = document.getElementById('hover-video');
+    if (video) {
+        // Play the video when the mouse enters
+        video.addEventListener("mouseenter", () => {
+            video.play();
+        });
 
-video.addEventListener('mouseover', () => {
-    video.play(); // Play the video on hover
-});
-
-video.addEventListener('mouseout', () => {
-    video.pause(); // Pause the video when the mouse leaves
-    video.currentTime = 0; // Reset to the start for a seamless loop
+        // Pause and reset the video when the mouse leaves
+        video.addEventListener("mouseleave", () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+    }
 });
