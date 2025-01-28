@@ -344,13 +344,51 @@
  .video-container {
     display: flex;
     justify-content: center;
-    margin: 0px 0;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1000px;
+    width: 100%;
 }
 
 video {
     width: 100%;
     max-width: 1000px;
-    height: auto; 
-    border: 1px solid #ddd; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); 
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer; /* Show a pointer cursor on hover */
+    opacity: 0.8; /* Slightly dim the video by default */
+    transition: opacity 0.3s ease; /* Smooth transition effect */
+}
+
+video:hover {
+    opacity: 1; /* Make it brighter on hover */
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    border-radius: 4px;
+
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
