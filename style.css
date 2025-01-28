@@ -3,89 +3,102 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+ }
+ 
+ 
+ body {
     font-family: 'Playfair Display', serif;
     background-color: #ffffff;
     color: #333;
-}
-
-/* Layout Container */
-.layout {
+ }
+ 
+ 
+ /* Layout Container */
+ .layout {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-}
-
-/* Content and Links Layout */
-.content-container {
+ }
+ 
+ 
+ /* Content and Links Layout */
+ .content-container {
     display: grid;
     grid-template-columns: 2fr 1fr; /* Main bio takes more space, links less */
     gap: 50px;
     max-width: 900px; /* Slightly wider layout for better alignment */
     align-items: stretch;
-}
-
-/* Main Bio Content */
-main {
+ }
+ 
+ 
+ /* Main Bio Content */
+ main {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-main h1 {
+ }
+ 
+ 
+ main h1 {
     font-size: 2rem; /* Smaller title for balance */
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 85px;
     text-transform: lowercase;
-}
-
-main p {
+ }
+ 
+ 
+ main p {
     font-size: 0.95rem; /* Reduce font size */
     line-height: 1.5;
     margin-bottom: 15px;
     text-align: justify;
-}
-
-/* Relevant Links Section */
-.links {
+ }
+ 
+ 
+ /* Relevant Links Section */
+ .links {
     text-align: left;
     margin-top: 175px;
-}
-
-.links h2 {
+ }
+ 
+ 
+ .links h2 {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.links ul {
+ }
+ 
+ 
+ .links ul {
     list-style: none;
     padding: 0;
-}
-
-.links li {
+ }
+ 
+ 
+ .links li {
     margin-bottom: 10px;
-}
-
-.links a {
+ }
+ 
+ 
+ .links a {
     text-decoration: underline;
     font-size: 1rem;
     font-weight: bold;
     color: black; /* Black for default links */
     transition: color 0.3s;
-}
-
-.links a:hover {
+ }
+ 
+ 
+ .links a:hover {
     color: #5b5bdb; /* Purple on hover for all links */
-}
-
-/* Sidebar Navigation */
-.sidebar {
+ }
+ 
+ 
+ /* Sidebar Navigation */
+ .sidebar {
     position: fixed;
     left: 0; /* Move sidebar to the left */
     top: 0;
@@ -97,89 +110,104 @@ main p {
     justify-content: flex-start;
     align-items: flex-start;
     border: none;
-}
-
-/* Sidebar List */
-.sidebar ul {
+ }
+ 
+ 
+ /* Sidebar List */
+ .sidebar ul {
     list-style: none;
     padding: 0;
-}
-
-.sidebar ul li {
+ }
+ 
+ 
+ .sidebar ul li {
     margin-bottom: 15px;
-}
-
-.sidebar ul li a {
+ }
+ 
+ 
+ .sidebar ul li a {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: lowercase;
     color: black; /* Black for default links */
     transition: color 0.3s;
-}
-
-.sidebar ul li a.active {
+ }
+ 
+ 
+ .sidebar ul li a.active {
     color: #5b5bdb; /* Purple for the active link */
-}
-
-.sidebar ul li a:hover {
+ }
+ 
+ 
+ .sidebar ul li a:hover {
     color: #5b5bdb; /* Purple on hover */
-}
-
-/* Gallery */
-.gallery {
+ }
+ 
+ 
+ /* Gallery */
+ .gallery {
     display: flex;
     justify-content: space-between; /* Space between images */
     gap: 70px;
     margin-top: 30px;
     max-width: 900px; /* Center images below bio */
-}
-
-.gallery img {
+ }
+ 
+ 
+ .gallery img {
     width: 60%; /* Proportional width */
     height: auto;
     object-fit: cover;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 1024px) {
+ }
+ 
+ 
+ /* Responsive Design */
+ @media screen and (max-width: 1024px) {
     .content-container {
         grid-template-columns: 1fr; /* Stack content vertically on smaller screens */
         gap: 20px;
         max-width: 100%; /* Allow the layout to shrink */
         padding: 10px;
     }
-
+ 
+ 
     main h1 {
         font-size: 1.8rem;
     }
-
+ 
+ 
     main p {
         font-size: 0.9rem;
     }
-
+ 
+ 
     .links h2 {
         font-size: 1.1rem;
     }
-
+ 
+ 
     .links a {
         font-size: 0.9rem;
     }
-
+ 
+ 
     .gallery {
         flex-direction: column;
         gap: 15px;
         margin-top: 20px;
     }
-
+ 
+ 
     .gallery img {
         width: 100%; /* Images span full width */
     }
-}
-
-@media screen and (max-width: 768px) {
+ }
+ 
+ 
+ @media screen and (max-width: 768px) {
     .sidebar {
         position: static;
         width: 100%;
@@ -189,30 +217,29 @@ main p {
         justify-content: center;
         background-color: #f9f9f9;
     }
-
+ 
+ 
     .sidebar ul {
         display: flex;
         gap: 20px;
     }
-
+ 
+ 
     .sidebar ul li {
         margin-bottom: 0;
     }
-}
-
-
-
-body.computing-page {
+ }
+ 
+ 
+ 
+ 
+ body.computing-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
  }
  
- body.computing-page h1{
-    text-align: left;
-    font-size: 2.1rem;
- }
-
+ 
  body.computing-page .layout {
     flex: 1;
  }
@@ -221,16 +248,69 @@ body.computing-page {
  body.computing-page .bottom-image-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+
  }
  
  
  body.computing-page #bottom-image {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     height: auto; /* Maintains aspect ratio */
-    margin-bottom: 20px; 
     border: 1px solid #ddd; /* Optional border for a cleaner look */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Adds depth */
  }
+ 
+ 
+ /* General Two-column Text Styling */
+ .two-column-container {
+    display: flex; /* Enables flex layout */
+    gap: 50px; /* Adds spacing between columns */
+    align-items: flex-start; /* Ensures both columns match height */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 70px;
+ }
+ 
+ 
+ 
+ 
+ /*.two-column-container h1 {
+    text-align: left;
+    margin-bottom: 100px;
+    font-size: 2.1rem;
+    margin-bottom: 0px;
+ }*/
+ 
+ 
+ .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+ 
+ 
+ .column p {
+    margin: 0;
+    text-align: justify;
+    break-inside: avoid;
+    line-height: 1.6;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ @media screen and (max-width: 768px) {
+    .two-column-text {
+        column-count: 1;
+    }
+ }
+ 
+
+ 
+
+ 
  
