@@ -413,6 +413,11 @@ body {
     text-align: justify;
 }
 
+.custom-text p {
+margin-bottom: 20px;
+}
+
+
 .custom-image-container-right {
     flex: 1;
     text-align: center;
