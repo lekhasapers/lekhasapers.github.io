@@ -355,16 +355,16 @@ video:hover {
 .tooltip-text {
     visibility: hidden;
     background-color: black;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 2px;
-    border-radius: 4px;
+    padding: 1px;
+    border-radius: 2px;
 
     position: absolute;
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 
     opacity: 0;
     transition: opacity 0.3s ease;
