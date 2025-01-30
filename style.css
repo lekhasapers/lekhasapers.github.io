@@ -516,12 +516,13 @@ body.computing-page .layout {
 /* Two-Column Layout */
 body.computing-page .two-column-container-computing {
     display: flex;
-    flex-wrap: nowrap; /* Prevents wrapping */
+    flex-wrap: wrap; /* Prevents wrapping */
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Align content at the top */
-    max-width: 1200px; /* Restricts container width */
+    max-width: 900px; /* Restricts container width */
     margin: 20px auto; /* Centers content horizontally */
     padding: 10px;
+
 }
 
 body.computing-page .computing-column {
@@ -550,7 +551,8 @@ body.computing-page h1 {
 body.computing-page .bottom-image-container {
     display: flex;
     justify-content: center; /* Centers the image */
-    margin-top: 40px; /* Adds spacing between content and the image */
+    margin-top: -40px;
+    
 }
 
 body.computing-page #bottom-image {
@@ -560,6 +562,7 @@ body.computing-page #bottom-image {
     border: 1px solid #ddd; /* Adds a light border */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
     border-radius: 8px; /* Rounds corners */
+    margin-top: -40px;
 }
 
 /* Responsive Design */
@@ -583,3 +586,12 @@ body.computing-page #bottom-image {
     }
 }
 
+.text-link {
+    text-decoration: none;
+    color: inherit; /* Inherit text color from parent */
+    cursor: pointer;
+}
+.text-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
