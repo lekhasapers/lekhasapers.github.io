@@ -599,3 +599,15 @@ body.computing-page #bottom-image {
     text-decoration: none; 
     color: inherit; 
 }
+
+.footer{
+    font-size: xx-small;
+    font-style: inherit;
+    display: flex;
+    max-width: 30%;
+    color: #666;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
