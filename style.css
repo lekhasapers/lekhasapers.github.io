@@ -520,7 +520,7 @@ body.computing-page .two-column-container-computing {
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Align content at the top */
     max-width: 900px; /* Restricts container width */
-    margin: 20px auto; /* Centers content horizontally */
+    margin: 10px auto; /* Centers content horizontally */
     padding: 10px;
 
 }
