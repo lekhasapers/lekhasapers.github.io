@@ -93,62 +93,32 @@
  
  
  .links a:hover {
-    color: #5b5bdb; /* Purple on hover for all links */
+    color: #5b5bdb; 
  }
  
- /* Sidebar Navigation */
+
 .sidebar {
     position: fixed;
     left: 0;
     top: 0;
     height: 100vh;
-    width: 150px; /* Slightly wider for better readability */
+    width: 150px; 
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: #ffffff; /* Ensures it's always readable */
-    z-index: 1000; /* Keeps sidebar above content */
-    overflow-y: auto; /* Allows scrolling if needed */
+    background-color: #ffffff; 
+    z-index: 1000; 
+    overflow-y: auto; 
 }
 
-/* Prevents content from being covered by the sidebar */
+
 .main-content {
-    margin-left: 170px; /* Pushes content over to accommodate the sidebar */
+    margin-left: 170px; 
     padding: 20px;
     flex-grow: 1;
 }
-
-/* Sidebar List */
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar ul li {
-    margin-bottom: 15px;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: lowercase;
-    color: black;
-    transition: color 0.3s;
-}
-
-.sidebar ul li a.active {
-    color: #5b5bdb;
-}
-
-.sidebar ul li a:hover {
-    color: #5b5bdb;
-}
-
-/* 📌 MOBILE FIX: Converts sidebar into a top navigation bar */
 @media screen and (max-width: 768px) {
     .sidebar {
         position: fixed;
@@ -176,8 +146,8 @@
     }
 
     .main-content {
-        margin-left: 0; /* Ensures content takes full width */
-        margin-top: 60px; /* Prevents content from being covered by top nav */
+        margin-left: 0; 
+        margin-top: 60px;
     }
 }
 
