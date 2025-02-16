@@ -96,55 +96,91 @@
     color: #5b5bdb; /* Purple on hover for all links */
  }
  
- 
  /* Sidebar Navigation */
- .sidebar {
+.sidebar {
     position: fixed;
-    left: 0; /* Move sidebar to the left */
+    left: 0;
     top: 0;
     height: 100vh;
-    width: 100px;
+    width: 150px; /* Slightly wider for better readability */
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: none;
- }
- 
- 
- /* Sidebar List */
- .sidebar ul {
+    background-color: #ffffff; /* Ensures it's always readable */
+    z-index: 1000; /* Keeps sidebar above content */
+    overflow-y: auto; /* Allows scrolling if needed */
+}
+
+/* Prevents content from being covered by the sidebar */
+.main-content {
+    margin-left: 170px; /* Pushes content over to accommodate the sidebar */
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Sidebar List */
+.sidebar ul {
     list-style: none;
     padding: 0;
- }
- 
- 
- .sidebar ul li {
+    margin: 0;
+}
+
+.sidebar ul li {
     margin-bottom: 15px;
- }
- 
- 
- .sidebar ul li a {
+}
+
+.sidebar ul li a {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
     text-transform: lowercase;
-    color: black; /* Black for default links */
+    color: black;
     transition: color 0.3s;
- }
- 
- 
- .sidebar ul li a.active {
-    color: #5b5bdb; /* Purple for the active link */
- }
- 
- 
- .sidebar ul li a:hover {
-    color: #5b5bdb; /* Purple on hover */
- }
- 
- 
+}
+
+.sidebar ul li a.active {
+    color: #5b5bdb;
+}
+
+.sidebar ul li a:hover {
+    color: #5b5bdb;
+}
+
+/* 📌 MOBILE FIX: Converts sidebar into a top navigation bar */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #f9f9f9;
+        z-index: 1000;
+    }
+
+    .sidebar ul {
+        display: flex;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar ul li {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+
+    .main-content {
+        margin-left: 0; /* Ensures content takes full width */
+        margin-top: 60px; /* Prevents content from being covered by top nav */
+    }
+}
+
  /* Gallery */
  .gallery {
     display: flex;
