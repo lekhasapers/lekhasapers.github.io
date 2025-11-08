@@ -229,16 +229,26 @@
     .sidebar ul li {
         margin-bottom: 0;
     }
+
+    /* Reduce margins on h1 to prevent overlap with navigation */
+    main h1 {
+        margin-top: 15px;
+        margin-bottom: 40px; /* Reduce from 85px */
+    }
+
+    /* Add padding to layout container on mobile */
+    .layout {
+        padding-top: 15px;
+    }
+
+    /* Ensure content container has proper spacing */
+    .content-container {
+        padding-top: 15px;
+    }
  }
  
  
- /* Additional mobile fixes for header spacing */
-@media screen and (max-width: 768px) {
-    main h1 {
-        margin-top: 30px !important;
-    }
-}
-
+ 
 body.computing-page {
     display: flex;
     flex-direction: column;
