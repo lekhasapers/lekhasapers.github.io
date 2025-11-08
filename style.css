@@ -33,7 +33,7 @@
     gap: 50px;
     max-width: 900px; /* Slightly wider layout for better alignment */
     align-items: stretch;
-    margin: 0 auto 0 150px; /* Simple left margin for sidebar breathing room */
+    margin: 0 50px 0 150px; /* Reduced right margin to minimize whitespace */
  }
  
  
@@ -160,7 +160,7 @@
     justify-content: space-between; /* Space between images */
     gap: 70px;
     max-width: 900px; /* Center images below bio */
-    margin: 30px auto 0 150px; /* Simple left margin for sidebar breathing room */
+    margin: 30px 50px 0 150px; /* Reduced right margin to minimize whitespace */
  }
  
  
@@ -289,7 +289,7 @@ body.computing-page {
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Ensures both columns match height */
     max-width: 1200px;
-    margin: 20px auto 0 150px; /* Simple left margin for sidebar breathing room */
+    margin: 20px 50px 0 150px; /* Reduced right margin to minimize whitespace */
     padding: 2px;
  }
  
@@ -560,7 +560,7 @@ body.computing-page .two-column-container-computing {
     gap: 30px; /* Reduced gap for three columns */
     align-items: flex-start; /* Align content at the top */
     max-width: 900px; /* Match main page width */
-    margin: 10px auto 10px 150px; /* Simple left margin for sidebar breathing room */
+    margin: 10px 50px 10px 150px; /* Reduced right margin to minimize whitespace */
     padding: 10px;
 
 }
@@ -595,7 +595,7 @@ body.computing-page .bottom-image-container {
     justify-content: flex-start; /* Align left instead of center */
     margin-top: -40px;
     margin-left: 150px; /* Simple left margin for sidebar breathing room */
-    margin-right: auto;
+    margin-right: 50px; /* Reduced right margin to minimize whitespace */
     max-width: 900px;
 }
 
