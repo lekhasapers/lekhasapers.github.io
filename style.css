@@ -599,14 +599,16 @@ body.computing-page #bottom-image {
         flex-direction: column;
         gap: 30px;
         flex-wrap: wrap; /* Allow wrapping on mobile */
-        margin-left: 0; /* Remove left margin on mobile */
+        margin-left: 0 !important; /* Remove left margin on mobile */
         margin-right: auto; /* Reset to auto for centering */
+        margin-top: 60px; /* Add top margin to push below horizontal nav */
     }
 
     body.computing-page h1 {
         font-size: 2rem; /* Adjusts title size */
         text-align: center; /* Centers title */
         width: 100%; /* Take full width */
+        margin-top: 20px; /* Add spacing below nav */
     }
 
     body.computing-page .computing-column {
