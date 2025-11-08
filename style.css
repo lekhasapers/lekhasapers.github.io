@@ -230,9 +230,14 @@
         margin-bottom: 0;
     }
 
+    /* Push main content down to prevent overlap with navigation */
+    main {
+        margin-top: 60px; /* Increased from 25px to create space below nav */
+    }
+
     /* Reduce margins on h1 to prevent overlap with navigation */
     main h1 {
-        margin-top: 40px; /* Increased to create more space below nav */
+        margin-top: 10px; /* Reduce since main already has top margin */
         margin-bottom: 40px; /* Reduce from 85px */
     }
 
