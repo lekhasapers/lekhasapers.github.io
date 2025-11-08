@@ -547,8 +547,7 @@ body.computing-page .two-column-container-computing {
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Align content at the top */
     max-width: 900px; /* Restricts container width */
-    margin: 10px auto; /* Centers content horizontally */
-    margin-left: 140px; /* Push content right to avoid fixed sidebar */
+    margin: 10px auto 10px 140px; /* Top, right (auto for centering), bottom, left (offset for sidebar) */
     padding: 10px;
 
 }
@@ -599,9 +598,7 @@ body.computing-page #bottom-image {
         flex-direction: column;
         gap: 30px;
         flex-wrap: wrap; /* Allow wrapping on mobile */
-        margin-left: 0 !important; /* Remove left margin on mobile */
-        margin-right: auto; /* Reset to auto for centering */
-        margin-top: 60px; /* Add top margin to push below horizontal nav */
+        margin: 60px auto 10px auto !important; /* Reset to centered with top spacing */
     }
 
     body.computing-page h1 {
