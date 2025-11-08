@@ -19,6 +19,7 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    margin-left: 120px; /* Push content right to avoid fixed sidebar */
  }
  
  
@@ -241,9 +242,10 @@
         margin-bottom: 40px !important; /* Reduce from 85px */
     }
 
-    /* Add padding to layout container on mobile */
+    /* Add padding to layout container on mobile and remove left margin */
     .layout {
         padding-top: 20px !important;
+        margin-left: 0 !important; /* Remove left margin since sidebar is now horizontal */
     }
 
     /* Ensure content container has proper spacing */
