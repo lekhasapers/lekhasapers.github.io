@@ -7,9 +7,13 @@
  
  
  body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: #ffffff;
-    color: #333;
+    color: #2a2a2a; /* Slightly softer than pure black */
+ }
+
+ h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
  }
  
  
@@ -52,8 +56,8 @@
  
  
  main p {
-    font-size: 0.95rem; 
-    line-height: 1.5;
+    font-size: 0.95rem;
+    line-height: 1.7;
     margin-bottom: 15px;
     text-align: justify;
  }
@@ -85,16 +89,20 @@
  
  
  .links a {
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
     color: black; /* Black for default links */
-    transition: color 0.3s;
+    border-bottom: 2px solid black;
+    padding-bottom: 2px;
+    display: inline-block;
+    transition: color 0.3s, border-color 0.3s;
  }
- 
- 
+
+
  .links a:hover {
     color: #5b5bdb; /* Purple on hover for all links */
+    border-bottom-color: #5b5bdb;
  }
  
  
@@ -110,7 +118,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border: none;
+    border-right: 1px solid #e5e5e5; /* Subtle separator line */
  }
  
  
@@ -162,6 +170,12 @@
     object-fit: cover;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ .gallery img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
  }
  
  
@@ -233,7 +247,7 @@
 
     /* Push main content down to prevent overlap with navigation */
     main {
-        margin-top: 100px !important; /* Significantly increased to create space below nav */
+        margin-top: 60px !important; /* Reduced for better mobile spacing */
     }
 
     /* Reduce margins on h1 to prevent overlap with navigation */
@@ -540,20 +554,21 @@ body.computing-page .layout {
     padding: 20px;
 }
 
-/* Two-Column Layout */
+/* Three-Column Layout */
 body.computing-page .two-column-container-computing {
     display: flex;
-    flex-wrap: nowrap; /* Prevents wrapping on desktop */
-    gap: 50px; /* Adds spacing between columns */
+    flex-wrap: wrap; /* Allow wrapping for h1 to take full width */
+    gap: 30px; /* Reduced gap for three columns */
     align-items: flex-start; /* Align content at the top */
-    max-width: 900px; /* Restricts container width */
+    max-width: 1000px; /* Slightly wider for three columns */
     margin: 10px auto 10px 140px; /* Top, right (auto for centering), bottom, left (offset for sidebar) */
     padding: 10px;
 
 }
 
 body.computing-page .computing-column {
-    flex: 1; /* Makes columns take equal width */
+    flex: 1 1 250px; /* Flex-grow, flex-shrink, minimum width for three columns */
+    min-width: 250px; /* Minimum width for each column */
     display: flex;
     flex-direction: column;
     gap: 20px; /* Adds space between paragraphs */
@@ -562,16 +577,17 @@ body.computing-page .computing-column {
 body.computing-page .computing-column p {
     margin: 0;
     text-align: justify;
-    line-height: 1.8; /* Improves readability */
+    line-height: 1.7; /* Consistent with main page */
 }
 
 /* Title Styling */
 body.computing-page h1 {
-    font-size: 2.0rem; 
+    font-size: 2.0rem;
     font-weight: bold;
     text-transform: lowercase;
     margin-bottom: 20px;
-    align-self: flex-start; /* Aligns title to the left */
+    flex-basis: 100%; /* Makes h1 take full width in flex container */
+    width: 100%; /* Ensures full width */
 }
 
 /* Bottom Image Styling */
