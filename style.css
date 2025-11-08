@@ -593,7 +593,7 @@ body.computing-page h1 {
 body.computing-page .bottom-image-container {
     display: flex;
     justify-content: flex-start; /* Align left instead of center */
-    margin: -40px 150px 10px 130px; /* Scooch image to the right */
+    margin: -40px 150px 10px 140px; /* Scooch image to the right more */
     max-width: 1100px; /* Match text container width */
 }
 
