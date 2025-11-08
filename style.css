@@ -232,18 +232,18 @@
 
     /* Reduce margins on h1 to prevent overlap with navigation */
     main h1 {
-        margin-top: 15px;
+        margin-top: 40px; /* Increased to create more space below nav */
         margin-bottom: 40px; /* Reduce from 85px */
     }
 
     /* Add padding to layout container on mobile */
     .layout {
-        padding-top: 15px;
+        padding-top: 20px;
     }
 
     /* Ensure content container has proper spacing */
     .content-container {
-        padding-top: 15px;
+        padding-top: 25px; /* Increased to push content further down */
     }
  }
  
@@ -362,7 +362,7 @@ video {
 }
 
 video:hover {
-    opacity: 1; /* Make it brighter on hover */
+    opacity: 1; 
 }
 
 .tooltip {
