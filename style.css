@@ -548,6 +548,7 @@ body.computing-page .two-column-container-computing {
     align-items: flex-start; /* Align content at the top */
     max-width: 900px; /* Restricts container width */
     margin: 10px auto; /* Centers content horizontally */
+    margin-left: 140px; /* Push content right to avoid fixed sidebar */
     padding: 10px;
 
 }
@@ -598,6 +599,8 @@ body.computing-page #bottom-image {
         flex-direction: column;
         gap: 30px;
         flex-wrap: wrap; /* Allow wrapping on mobile */
+        margin-left: 0; /* Remove left margin on mobile */
+        margin-right: auto; /* Reset to auto for centering */
     }
 
     body.computing-page h1 {
