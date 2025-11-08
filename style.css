@@ -216,6 +216,7 @@
         flex-direction: row;
         justify-content: center;
         background-color: #f9f9f9;
+        margin-bottom: 20px; /* Add spacing below sidebar */
     }
  
  
@@ -231,7 +232,14 @@
  }
  
  
- body.computing-page {
+ /* Additional mobile fixes for header spacing */
+@media screen and (max-width: 768px) {
+    main h1 {
+        margin-top: 30px !important;
+    }
+}
+
+body.computing-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -517,7 +525,7 @@ body.computing-page .layout {
 /* Two-Column Layout */
 body.computing-page .two-column-container-computing {
     display: flex;
-    flex-wrap: wrap; /* Prevents wrapping */
+    flex-wrap: nowrap; /* Prevents wrapping on desktop */
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Align content at the top */
     max-width: 900px; /* Restricts container width */
@@ -569,21 +577,30 @@ body.computing-page #bottom-image {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body.computing-page .two-column-container-computing {
-        flex-direction: column; 
-        gap: 30px; 
+        flex-direction: column;
+        gap: 30px;
+        flex-wrap: wrap; /* Allow wrapping on mobile */
     }
 
     body.computing-page h1 {
         font-size: 2rem; /* Adjusts title size */
         text-align: center; /* Centers title */
+        width: 100%; /* Take full width */
     }
 
     body.computing-page .computing-column {
         max-width: 100%; /* Ensures columns take full width */
+        width: 100%; /* Force full width */
+    }
+
+    body.computing-page .bottom-image-container {
+        margin-top: 20px; /* Add more space above image */
+        padding: 10px;
     }
 
     body.computing-page #bottom-image {
         max-width: 100%; /* Makes image responsive */
+        margin-top: 0; /* Reset negative margin on mobile */
     }
 }
 
