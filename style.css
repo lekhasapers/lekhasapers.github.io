@@ -31,9 +31,10 @@
     display: grid;
     grid-template-columns: 2fr 1fr; /* Main bio takes more space, links less */
     gap: 50px;
-    max-width: 900px; /* Slightly wider layout for better alignment */
+    max-width: 1000px; /* Increased max-width for better use of space */
     align-items: stretch;
-    margin: 0 80px 0 120px; /* Balanced margins with sidebar breathing room */
+    margin: 0 auto; /* Center the container */
+    margin-left: 150px; /* Offset for sidebar */
  }
  
  
@@ -159,8 +160,9 @@
     display: flex;
     justify-content: space-between; /* Space between images */
     gap: 70px;
-    max-width: 900px; /* Center images below bio */
-    margin: 30px 80px 0 120px; /* Balanced margins with sidebar breathing room */
+    max-width: 1000px; /* Match content container width */
+    margin: 30px auto 0 auto; /* Center the gallery */
+    margin-left: 150px; /* Offset for sidebar */
  }
  
  
@@ -289,7 +291,8 @@ body.computing-page {
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Ensures both columns match height */
     max-width: 1200px;
-    margin: 20px 80px 0 120px; /* Balanced margins with sidebar breathing room */
+    margin: 20px auto 0 auto; /* Center the container */
+    margin-left: 150px; /* Offset for sidebar */
     padding: 2px;
  }
  
@@ -559,8 +562,9 @@ body.computing-page .two-column-container-computing {
     flex-wrap: wrap; /* Allow wrapping for h1 to take full width */
     gap: 30px; /* Reduced gap for three columns */
     align-items: flex-start; /* Align content at the top */
-    max-width: 900px; /* Match main page width */
-    margin: 10px 80px 10px 120px; /* Balanced margins with sidebar breathing room */
+    max-width: 1000px; /* Match main page width */
+    margin: 10px auto; /* Center the container */
+    margin-left: 150px; /* Offset for sidebar */
     padding: 10px;
 
 }
@@ -594,14 +598,14 @@ body.computing-page .bottom-image-container {
     display: flex;
     justify-content: flex-start; /* Align left instead of center */
     margin-top: -40px;
-    margin-left: 120px; /* Balanced left margin with sidebar breathing room */
-    margin-right: 80px; /* Balanced right margin */
-    max-width: 900px;
+    margin-left: 150px; /* Offset for sidebar */
+    margin-right: auto; /* Auto right margin */
+    max-width: 1000px; /* Match text container width */
 }
 
 body.computing-page #bottom-image {
     width: 100%;
-    max-width: 900px; /* Match text container width */
+    max-width: 1000px; /* Match text container width */
     height: auto;
     border: 1px solid #ddd;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
