@@ -31,10 +31,9 @@
     display: grid;
     grid-template-columns: 2fr 1fr; /* Main bio takes more space, links less */
     gap: 50px;
-    max-width: 1000px; /* Increased max-width for better use of space */
+    max-width: 1100px; /* Increased max-width for better use of space */
     align-items: stretch;
-    margin: 0 auto; /* Center the container */
-    margin-left: 150px; /* Offset for sidebar */
+    margin: 0 100px 0 130px; /* Balanced margins - less left, more right */
  }
  
  
@@ -160,9 +159,8 @@
     display: flex;
     justify-content: space-between; /* Space between images */
     gap: 70px;
-    max-width: 1000px; /* Match content container width */
-    margin: 30px auto 0 auto; /* Center the gallery */
-    margin-left: 150px; /* Offset for sidebar */
+    max-width: 1100px; /* Match content container width */
+    margin: 30px 100px 0 130px; /* Balanced margins - less left, more right */
  }
  
  
@@ -290,9 +288,8 @@ body.computing-page {
     display: flex; /* Enables flex layout */
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Ensures both columns match height */
-    max-width: 1200px;
-    margin: 20px auto 0 auto; /* Center the container */
-    margin-left: 150px; /* Offset for sidebar */
+    max-width: 1300px;
+    margin: 20px 100px 0 130px; /* Balanced margins - less left, more right */
     padding: 2px;
  }
  
@@ -562,9 +559,8 @@ body.computing-page .two-column-container-computing {
     flex-wrap: wrap; /* Allow wrapping for h1 to take full width */
     gap: 30px; /* Reduced gap for three columns */
     align-items: flex-start; /* Align content at the top */
-    max-width: 1000px; /* Match main page width */
-    margin: 10px auto; /* Center the container */
-    margin-left: 150px; /* Offset for sidebar */
+    max-width: 1100px; /* Match main page width */
+    margin: 10px 100px 10px 130px; /* Balanced margins - less left, more right */
     padding: 10px;
 
 }
@@ -598,14 +594,14 @@ body.computing-page .bottom-image-container {
     display: flex;
     justify-content: flex-start; /* Align left instead of center */
     margin-top: -40px;
-    margin-left: 150px; /* Offset for sidebar */
-    margin-right: auto; /* Auto right margin */
-    max-width: 1000px; /* Match text container width */
+    margin-left: 130px; /* Offset for sidebar */
+    margin-right: 100px; /* Balanced right margin */
+    max-width: 1100px; /* Match text container width */
 }
 
 body.computing-page #bottom-image {
     width: 100%;
-    max-width: 1000px; /* Match text container width */
+    max-width: 1100px; /* Match text container width */
     height: auto;
     border: 1px solid #ddd;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
