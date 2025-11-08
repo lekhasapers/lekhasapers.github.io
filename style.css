@@ -33,8 +33,7 @@
     gap: 50px;
     max-width: 900px; /* Slightly wider layout for better alignment */
     align-items: stretch;
-    margin: 0 auto;
-    margin-left: calc(50% - 450px + 90px); /* Center with sidebar offset */
+    margin: 0 auto 0 150px; /* Simple left margin for sidebar breathing room */
  }
  
  
@@ -160,10 +159,8 @@
     display: flex;
     justify-content: space-between; /* Space between images */
     gap: 70px;
-    margin-top: 30px;
     max-width: 900px; /* Center images below bio */
-    margin-left: calc(50% - 450px + 90px); /* Center with sidebar offset */
-    margin-right: auto;
+    margin: 30px auto 0 150px; /* Simple left margin for sidebar breathing room */
  }
  
  
@@ -292,8 +289,7 @@ body.computing-page {
     gap: 50px; /* Adds spacing between columns */
     align-items: flex-start; /* Ensures both columns match height */
     max-width: 1200px;
-    margin: 20px auto 0 auto;
-    margin-left: calc(50% - 600px + 90px); /* Center with sidebar offset */
+    margin: 20px auto 0 150px; /* Simple left margin for sidebar breathing room */
     padding: 2px;
  }
  
@@ -564,8 +560,7 @@ body.computing-page .two-column-container-computing {
     gap: 30px; /* Reduced gap for three columns */
     align-items: flex-start; /* Align content at the top */
     max-width: 900px; /* Match main page width */
-    margin: 10px auto; /* Center with equal margins */
-    margin-left: calc(50% - 450px + 90px); /* Offset from center to account for sidebar */
+    margin: 10px auto 10px 150px; /* Simple left margin for sidebar breathing room */
     padding: 10px;
 
 }
@@ -599,7 +594,7 @@ body.computing-page .bottom-image-container {
     display: flex;
     justify-content: flex-start; /* Align left instead of center */
     margin-top: -40px;
-    margin-left: calc(50% - 450px + 90px); /* Match text container offset */
+    margin-left: 150px; /* Simple left margin for sidebar breathing room */
     margin-right: auto;
     max-width: 900px;
 }
