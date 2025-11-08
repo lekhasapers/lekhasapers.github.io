@@ -33,7 +33,7 @@
     gap: 50px;
     max-width: 900px; /* Slightly wider layout for better alignment */
     align-items: stretch;
-    margin-left: 120px; /* Push content right to avoid fixed sidebar */
+    margin: 0 auto 0 120px; /* Push left for sidebar, auto right for centering */
  }
  
  
@@ -118,7 +118,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    border-right: 1px solid #e5e5e5; /* Subtle separator line */
+    border: none;
  }
  
  
@@ -161,6 +161,8 @@
     gap: 70px;
     margin-top: 30px;
     max-width: 900px; /* Center images below bio */
+    margin-left: 120px; /* Align with content above */
+    margin-right: auto;
  }
  
  
@@ -560,8 +562,8 @@ body.computing-page .two-column-container-computing {
     flex-wrap: wrap; /* Allow wrapping for h1 to take full width */
     gap: 30px; /* Reduced gap for three columns */
     align-items: flex-start; /* Align content at the top */
-    max-width: 1000px; /* Slightly wider for three columns */
-    margin: 10px auto 10px 140px; /* Top, right (auto for centering), bottom, left (offset for sidebar) */
+    max-width: 900px; /* Match main page width */
+    margin: 10px auto 10px 120px; /* Match main page offset - aligned left margin, auto right */
     padding: 10px;
 
 }
@@ -593,18 +595,20 @@ body.computing-page h1 {
 /* Bottom Image Styling */
 body.computing-page .bottom-image-container {
     display: flex;
-    justify-content: center; /* Centers the image */
+    justify-content: flex-start; /* Align left instead of center */
     margin-top: -40px;
-    
+    margin-left: 120px; /* Align with content above */
+    margin-right: auto;
+    max-width: calc(900px + 120px); /* Account for left margin */
 }
 
 body.computing-page #bottom-image {
     width: 100%;
-    max-width: 1000px; 
-    height: auto; 
-    border: 1px solid #ddd; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); 
-    border-radius: 8px; 
+    max-width: 900px; /* Match text container width */
+    height: auto;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
     margin-top: -40px;
 }
 
@@ -631,7 +635,9 @@ body.computing-page #bottom-image {
 
     body.computing-page .bottom-image-container {
         margin-top: 20px; /* Add more space above image */
+        margin-left: 0; /* Reset left margin on mobile */
         padding: 10px;
+        justify-content: center; /* Center on mobile */
     }
 
     body.computing-page #bottom-image {
