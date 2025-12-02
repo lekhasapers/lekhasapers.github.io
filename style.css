@@ -642,17 +642,28 @@ body.computing-page #bottom-image {
 }
 
 .text-link {
-    text-decoration: none; 
-    color: inherit; 
-    font-weight: inherit; 
-    font-size: inherit; 
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
     font-style: inherit;
-    cursor: default; 
+    cursor: default;
 }
 
 .text-link:hover, .text-link:focus {
-    text-decoration: none; 
-    color: inherit; 
+    text-decoration: none;
+    color: inherit;
+}
+
+.ia-link {
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.ia-link:hover {
+    color: #5b5bdb;
 }
 
 .footer {
